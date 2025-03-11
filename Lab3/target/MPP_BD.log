@@ -1,0 +1,129 @@
+11 Mar 2025 17:22:24,650 INFO  com.LucaP111.ProiectJava.CartiDBRepository 16 <init> - Initializing com.LucaP111.ProiectJava.CartiDBRepository with properties: {jdbc.url=jdbc:sqlite:C:UsersandreDesktopUBB-MaterialeAn2-Sem2RezolvariMPPDatabasesCarti} 
+11 Mar 2025 17:22:24,658 TRACE com.LucaP111.ProiectJava.CartiDBRepository 69 add - Enter Adding book: Id=0 Nameless 100 2020
+11 Mar 2025 17:22:24,659 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:22:24,659 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:22:24,659 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersandreDesktopUBB-MaterialeAn2-Sem2RezolvariMPPDatabasesCarti
+11 Mar 2025 17:22:24,661 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:22:24,661 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:22:24,911 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:22:24,914 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@17a87e37)
+11 Mar 2025 17:22:24,916 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] INSERT INTO Carte (author, publication, nr_pages) VALUES (?, ?, ?)
+11 Mar 2025 17:22:24,918 ERROR com.LucaP111.ProiectJava.CartiDBRepository 79 add - Error adding book
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Carte)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at com.LucaP111.ProiectJava.CartiDBRepository.add(CartiDBRepository.java:73) [main/:?]
+	at com.LucaP111.ProiectJava.CartiDBRepository.add(CartiDBRepository.java:10) [main/:?]
+	at com.LucaP111.ProiectJava.MainBD.main(MainBD.java:17) [MainBD.java:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.tools.javac.launcher.Main.execute(Main.java:419) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.run(Main.java:192) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.main(Main.java:132) [jdk.compiler:?]
+11 Mar 2025 17:22:24,926 TRACE com.LucaP111.ProiectJava.CartiDBRepository 102 findAll - Enter Finding all books
+11 Mar 2025 17:22:24,926 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:22:24,926 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:22:24,926 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersandreDesktopUBB-MaterialeAn2-Sem2RezolvariMPPDatabasesCarti
+11 Mar 2025 17:22:24,927 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:22:24,927 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:22:24,928 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:22:24,928 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@a5bd950)
+11 Mar 2025 17:22:24,928 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] SELECT * FROM Carte
+11 Mar 2025 17:22:24,929 ERROR com.LucaP111.ProiectJava.CartiDBRepository 113 findAll - Error finding all books
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Carte)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at com.LucaP111.ProiectJava.CartiDBRepository.findAll(CartiDBRepository.java:107) [main/:?]
+	at com.LucaP111.ProiectJava.MainBD.main(MainBD.java:19) [MainBD.java:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.tools.javac.launcher.Main.execute(Main.java:419) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.run(Main.java:192) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.main(Main.java:132) [jdk.compiler:?]
+11 Mar 2025 17:22:24,930 TRACE com.LucaP111.ProiectJava.CartiDBRepository 26 findByManufacturer - Enter Finding books by author: Nameless
+11 Mar 2025 17:22:24,930 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:22:24,930 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:22:24,930 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:UsersandreDesktopUBB-MaterialeAn2-Sem2RezolvariMPPDatabasesCarti
+11 Mar 2025 17:22:24,930 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:22:24,931 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:22:24,932 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:22:24,933 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4d18aa28)
+11 Mar 2025 17:22:24,933 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] SELECT * FROM Carte WHERE author = ?
+11 Mar 2025 17:22:24,934 ERROR com.LucaP111.ProiectJava.CartiDBRepository 39 findByManufacturer - Error finding books by author
+org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such table: Carte)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.newSQLException(DB.java:1190) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.throwex(DB.java:1150) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:132) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.DB.prepare(DB.java:264) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205) ~[sqlite-jdbc-3.45.1.0.jar:?]
+	at com.LucaP111.ProiectJava.CartiDBRepository.findByManufacturer(CartiDBRepository.java:31) [main/:?]
+	at com.LucaP111.ProiectJava.MainBD.main(MainBD.java:23) [MainBD.java:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at com.sun.tools.javac.launcher.Main.execute(Main.java:419) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.run(Main.java:192) [jdk.compiler:?]
+	at com.sun.tools.javac.launcher.Main.main(Main.java:132) [jdk.compiler:?]
+11 Mar 2025 17:27:46,884 INFO  com.LucaP111.ProiectJava.CartiDBRepository 16 <init> - Initializing com.LucaP111.ProiectJava.CartiDBRepository with properties: {jdbc.url=jdbc:sqlite:C:\Users\andre\Desktop\UBB-Materiale\An2-Sem2\RezolvariMPP\Databases\Carti} 
+11 Mar 2025 17:27:46,894 TRACE com.LucaP111.ProiectJava.CartiDBRepository 69 add - Enter Adding book: Id=0 Nameless 100 2020
+11 Mar 2025 17:27:46,894 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:27:46,894 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:27:46,894 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\andre\Desktop\UBB-Materiale\An2-Sem2\RezolvariMPP\Databases\Carti
+11 Mar 2025 17:27:46,895 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:27:46,895 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:27:47,137 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:27:47,139 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3eeb318f)
+11 Mar 2025 17:27:47,141 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] INSERT INTO Carte (author, publication, nr_pages) VALUES (?, ?, ?)
+11 Mar 2025 17:27:47,147 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] begin;
+11 Mar 2025 17:27:47,148 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] commit;
+11 Mar 2025 17:27:47,150 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] SELECT last_insert_rowid();
+11 Mar 2025 17:27:47,151 TRACE com.LucaP111.ProiectJava.CartiDBRepository 102 findAll - Enter Finding all books
+11 Mar 2025 17:27:47,152 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:27:47,152 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:27:47,152 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\andre\Desktop\UBB-Materiale\An2-Sem2\RezolvariMPP\Databases\Carti
+11 Mar 2025 17:27:47,152 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:27:47,152 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:27:47,154 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:27:47,155 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@68b6f0d6)
+11 Mar 2025 17:27:47,155 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] SELECT * FROM Carte
+11 Mar 2025 17:27:47,158 TRACE com.LucaP111.ProiectJava.CartiDBRepository 26 findByManufacturer - Enter Finding books by author: Nameless
+11 Mar 2025 17:27:47,158 TRACE com.LucaP111.ProiectJava.JdbcUtils 48 getConnection - Enter
+11 Mar 2025 17:27:47,158 TRACE com.LucaP111.ProiectJava.JdbcUtils 25 getNewConnection - Enter
+11 Mar 2025 17:27:47,158 INFO  com.LucaP111.ProiectJava.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:C:\Users\andre\Desktop\UBB-Materiale\An2-Sem2\RezolvariMPP\Databases\Carti
+11 Mar 2025 17:27:47,158 INFO  com.LucaP111.ProiectJava.JdbcUtils 31 getNewConnection - user: null
+11 Mar 2025 17:27:47,159 INFO  com.LucaP111.ProiectJava.JdbcUtils 32 getNewConnection - pass: null
+11 Mar 2025 17:27:47,159 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] pragma busy_timeout=3000
+11 Mar 2025 17:27:47,160 TRACE com.LucaP111.ProiectJava.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7b8233cd)
+11 Mar 2025 17:27:47,160 TRACE org.sqlite.core.NativeDB 129 prepare - DriverManager [main] [SQLite EXEC] SELECT * FROM Carte WHERE author = ?

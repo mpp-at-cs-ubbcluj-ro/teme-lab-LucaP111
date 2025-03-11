@@ -23,5 +23,6 @@ public class MainBD {
         for(Carte carte :carteRepo.findByManufacturer(manufacturer))
             System.out.println(carte);
 
+
     }
 }
